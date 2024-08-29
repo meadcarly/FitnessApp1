@@ -1,0 +1,56 @@
+@using Azure.Core
+@using Mysqlx
+@using Mysqlx.Notice
+@model Measurements
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Update Measurement</title>
+</head>
+<body>
+<div>
+    <h2>Update @Model.MeasurementID</h2>
+    @using (Html.BeginForm("UpdateMeasurementToDatabase", "Measurement", "Post"))
+    {
+        <input asp-for="MeasurementID" type="hidden" value="@Model.MeasurementID"/>
+        
+        <label asp-for="Weight" type="control-label">Weight</label>
+        <input asp-for="Weight" type="number" name="Weight" class="form-control" value="@Model.Weight" />
+        
+        <label asp-for="Waist" type="control-label">Waist</label>
+        <input asp-for="Waist" type="number" name="Waist" class="form-control" value="@Model.Waist" />
+        
+        <label asp-for="LeftThigh" type="control-label">LeftThigh</label>
+        <input asp-for="LeftThigh" type="number" name="LeftThigh" class="form-control" value="@Model.LeftThigh" />
+        
+        <label asp-for="RightThigh" type="control-label">RightThigh</label>
+        <input asp-for="RightThigh" type="number" name="RightThigh" class="form-control" value="@Model.RightThigh" />
+        
+        <label asp-for="LeftCalf" type="control-label">LeftCalft</label>
+        <input asp-for="LeftCalf" type="number" name="LeftCalf" class="form-control" value="@Model.LeftCalf" />
+        
+        <label asp-for="RightCalf" type="control-label">RightCalf</label>
+        <input asp-for="RightCalf" type="number" name="RightCalf" class="form-control" value="@Model.RightCalf" />
+        
+        <label asp-for="LeftBicep" type="control-label">LeftBicep</label>
+        <input asp-for="LeftBicep" type="number" name="LeftBicep" class="form-control" value="@Model.LeftBicep" />
+        
+        <label asp-for="RightBicep" type="control-label">RightBicep</label>
+        <input asp-for="RightBicep" type="number" name="RightBicep" class="form-control" value="@Model.RightBicep" />
+        
+        <label asp-for="Shoulders" type="control-label">Shoulders</label>
+        <input asp-for="Shoulders" type="number" name="Shoulders" class="form-control" value="@Model.Shoulders" />
+        
+        <label asp-for="Date" type="control-label">Date</label>
+        <input asp-for="Date" type="date" name="Date" class="form-control" value="@Model.Date" />
+    
+        <label asp-for="UserID" type="control-label">UserID</label>
+        <input asp-for="UserID" type="number" name="UserID" class="form-control" value="@Model.UserID" />
+    
+        <input type="submit" value="Update Product" class="btn btn-primary" />
+    }
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@model Measurements
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Insert Measurements</title>
+</head>
+<body>
+<div>
+    <h2>Add new measurements</h2>
+    @using (Html.BeginForm("InsertMeasurementsToDatabase", "Measurement", "Post"))
+    {
+        <input asp-for="MeasurementID" type="hidden" value=""/>
+        
+        <label asp-for="Weight" type="control-label">Weight</label>
+        <input asp-for="Weight" type="number" step="0.01" name="Weight" class="form-control" value="" />
+        
+        <label asp-for="Waist" type="control-label">Waist</label>
+        <input asp-for="Waist" type="number" step="0.01" name="Waist" class="form-control" value="" />
+        
+        <label asp-for="LeftThigh" type="control-label">LeftThigh</label>
+        <input asp-for="LeftThigh" type="number" step="0.01" name="LeftThigh" class="form-control" value="" />
+        
+        <label asp-for="RightThigh" type="control-label">RightThigh</label>
+        <input asp-for="RightThigh" type="number" step="0.01" name="RightThigh" class="form-control" value="" />
+        
+        <label asp-for="LeftCalf" type="control-label">LeftCalf</label>
+        <input asp-for="LeftCalf" type="number" step="0.01" name="LeftCalf" class="form-control" value="" />
+        
+        <label asp-for="RightCalf" type="control-label">RightCalf</label>
+        <input asp-for="RightCalf" type="number" step="0.01" name="RightCalf" class="form-control" value="" />
+        
+        <label asp-for="LeftBicep" type="control-label">LeftBicep</label>
+        <input asp-for="LeftBicep" type="number" step="0.01" name="LeftBicep" class="form-control" value="" />
+        
+        <label asp-for="RightBicep" type="control-label">RightBicep</label>
+        <input asp-for="RightBicep" type="number" step="0.01" name="RightBicep" class="form-control" value="" />
+        
+        <label asp-for="Shoulders" type="control-label">Shoulders</label>
+        <input asp-for="Shoulders" type="number" step="0.01" name="Shoulders" class="form-control" value="" />
+        
+        <label asp-for="Date" type="control-label">Date</label>
+        <input asp-for="Date" type="date" name="Date" class="form-control" value="" />
+    
+        <label asp-for="UserID" type="control-label">UserID</label>
+        <input asp-for="UserID" type="number" name="UserID" class="form-control" value="" />
+    
+        <input type="submit" value="Add measurements" class="btn btn-primary" />
+    }
+</div>
+</body>
+</html>

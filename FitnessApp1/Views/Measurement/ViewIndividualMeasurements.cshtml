@@ -1,0 +1,49 @@
+@model Measurements
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <h2>@Model.MeasurementID Information</h2>
+
+    <table class="table">
+        <tr>
+            <th>Measurement ID</th>
+            <th>Weight</th>
+            <th>Waist</th>
+            <th>Left Thigh</th>
+            <th>Right Thigh</th>
+            <th>Left Calf</th>
+            <th>Right Calf</th>
+            <th>Left Bicep</th>
+            <th>Right Bicep</th>
+            <th>Shoulders</th>
+            <th>Date(year-month-day)</th>
+            <th>User ID</th>
+        </tr>
+        <tr>
+            <td>@Model.MeasurementID</td>
+            <td>@Model.Weight</td>
+            <td>@Model.Waist</td>
+            <td>@Model.LeftThigh</td>
+            <td>@Model.RightThigh</td>
+            <td>@Model.LeftCalf</td>
+            <td>@Model.RightCalf</td>
+            <td>@Model.LeftBicep</td>
+            <td>@Model.RightBicep</td>
+            <td>@Model.Shoulders</td>
+            <td>@Model.Date</td>
+            <td>@Model.UserID</td>
+        </tr>
+    </table>
+    <div style="display: block">
+        <a href="/Measurement/UpdateMeasurement/@Model.MeasurementID">Update these measurements</a>
+    </div>
+</div>
+</body>
+</html>
+

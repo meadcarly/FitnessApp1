@@ -1,0 +1,44 @@
+@model ExerciseOptions
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Insert New Exercise</title>
+</head>
+<body>
+<div>
+    <h2>Add an Exercise</h2>
+    @using (Html.BeginForm("InsertExerciseToDatabase", "Exercise", "Post"))
+    {
+        <label asp-for="ExerciseName" class="control-label">Exercise Name</label>
+        <input asp-for="ExerciseName" type="text" class="form-control" />
+        
+        <div class="form-group">
+            <label asp-for="Type" class="control-label">Select the Exercise Type</label>
+            <select asp-for="Type" id="enumSelect" class="form-control">
+                <option value="" disabled selected>Select</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Strength">Strength</option>
+                <option value="Flexibility">Flexibility</option>
+                <option value="Balance">Balance</option>
+                <option value="Agility">Agility</option>
+                <option value="Core">Core</option>
+                <option value="Combination">Combination</option>
+            </select>
+        </div>
+        
+        <label asp-for="Sets" class="control-label">Number of Sets</label>
+        <input asp-for="Sets" type="number" class="form-control" />
+        
+        <label asp-for="Reps" class="control-label">Number of Reps</label>
+        <input asp-for="Reps" type="number" class="form-control" />
+        
+        <label asp-for="Time" class="control-label">Time/Duration</label>
+        <input asp-for="Time" type="text" class="form-control" />
+        
+        <input type="submit" value="Create Exercise" class="btn btn-primary"/>
+    }
+</div>
+</body>
+</html>

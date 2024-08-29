@@ -1,0 +1,50 @@
+@model IEnumerable<Measurements>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Measurements History</title>
+</head>
+<body>
+<div>
+    <h2>Measurement History</h2>
+    <div style="display: block">
+        <a href="/Measurement/InsertMeasurements">Add new measurements</a>
+    </div>
+    <table class="table">
+        <tr>
+            <th>Measurement ID</th>
+            <th>Weight</th>
+            <th>Waist</th>
+            <th>Left Thigh</th>
+            <th>Right Thigh</th>
+            <th>Left Calf</th>
+            <th>Right Calf</th>
+            <th>Left Bicep</th>
+            <th>Right Bicep</th>
+            <th>Shoulders</th>
+            <th>Date(year-month-day)</th>
+            <th>User ID</th>
+        </tr>
+        @foreach (var measurement in @Model)
+        {
+            <tr>
+                <td><a href="/Measurement/ViewIndividualMeasurements/@measurement.MeasurementID">@measurement.MeasurementID</a></td>
+                <td>@measurement.Weight</td>
+                <td>@measurement.Waist</td>
+                <td>@measurement.LeftThigh</td>
+                <td>@measurement.RightThigh</td>
+                <td>@measurement.LeftCalf</td>
+                <td>@measurement.RightCalf</td>
+                <td>@measurement.LeftBicep</td>
+                <td>@measurement.RightBicep</td>
+                <td>@measurement.Shoulders</td>
+                <td>@measurement.Date</td>
+                <td>@measurement.UserID</td>
+            </tr>
+        }
+    </table>
+</div>
+</body>
+</html>

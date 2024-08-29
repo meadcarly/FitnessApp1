@@ -1,0 +1,40 @@
+@model IEnumerable<ExerciseOptions>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Exercises</title>
+</head>
+<body>
+<div>
+    <h2>Exercises List</h2>
+
+    <div style="display: block">
+        <a href="/Exercise/InsertExercise">Enter a new Exercise</a>
+    </div>
+    
+    <table class="table">
+        <tr>
+            <th>Exercise ID</th>
+            <th>Exercise Name</th>
+            <th>Type</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Time</th>
+        </tr>
+        @foreach (var exercise in @Model)
+        {
+            <tr>
+                <td><a href="/Exercise/ViewIndividualExercise/@exercise.ExerciseID">@exercise.ExerciseID</a></td>
+                <td>@exercise.ExerciseName</td>
+                <td>@exercise.Type</td>
+                <td>@exercise.Sets</td>
+                <td>@exercise.Reps</td>
+                <td>@exercise.Time</td>
+            </tr>
+        }
+    </table>
+</div>
+</body>
+</html>

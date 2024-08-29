@@ -1,0 +1,31 @@
+@using System.Formats.Asn1
+@using System.Runtime.InteropServices
+@model ExerciseOptions
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Update Exercise</title>
+</head>
+<body>
+<div>
+    <h2>Update @Model.ExerciseName</h2>
+    @using (Html.BeginForm("UpdateExerciseToDatabase", "Exercise", "Post"))
+    {
+        <input asp-for="ExerciseID" type="hidden" value="@Model.ExerciseID" />
+        
+        <label asp-for="Sets" class="control-label">Number of Sets</label>
+        <input asp-for="Sets" type="text" name="Sets" class="form-control" value="@Model.Sets"/>
+
+        <label asp-for="Reps" class="control-label">Number of Reps</label>
+        <input asp-for="Reps" type="text" name="Reps" class="form-control" value="@Model.Reps"/>
+        
+        <label asp-for="Time" class="control-label">Time Duration</label>
+        <input asp-for="Time" type="text" name="Time" class="form-control" value="@Model.Time"/>
+        
+        <input type="submit" value="Update Exercise"class="btn btn-primary"/>
+    }
+</div>
+</body>
+</html>
