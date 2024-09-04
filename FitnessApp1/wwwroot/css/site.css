@@ -20,3 +20,28 @@ html {
 body {
   margin-bottom: 60px;
 }
+.inline-block{
+  display: inline-block;
+  margin: 35px;
+}
+#introduction-photo{
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgba(91, 93, 95);
+  margin-bottom: 1px;
+}
+#introduction-photo2{
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgba(91, 93, 95);
+  margin-bottom: 1px;
+}
+#introduction-photo3{
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px rgba(91, 93, 95);
+  margin-bottom: 1px;
+}

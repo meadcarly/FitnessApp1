@@ -1,4 +1,3 @@
-@using Azure.Core
 @using Mysqlx
 @using Mysqlx.Notice
 @model Measurements
@@ -52,5 +51,34 @@
         <input type="submit" value="Update Product" class="btn btn-primary" />
     }
 </div>
+<div>
+    <h3>Conversion (cm to in)</h3>
+    <label for="cmInput">Centimeters:</label>
+    <input id="cmInput" type="number" class="form-control" oninput="convertToInches()" placeholder="Enter cm" />
+
+    <label for="inchesOutput">Inches:</label>
+    <input id="inchesOutput" type="text" class="form-control" readonly placeholder="Inches will appear here" />
+</div>
+<script>
+    function convertToInches() {
+        var cmInput = document.getElementById('cmInput').value;
+        var inchesOutput = document.getElementById('inchesOutput');
+
+        if (cmInput) {
+            // Make an AJAX call to the controller action
+            fetch(`/Measurement/ConvertToInches?cm=${encodeURIComponent(cmInput)}`)
+                .then(response => response.json())
+                .then(data => {
+                    inchesOutput.value = data.toFixed(2); // Display result with 2 decimal places
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    inchesOutput.value = ''; // Clear output if there's an error
+                });
+        } else {
+            inchesOutput.value = ''; // Clear output if input is empty
+        }
+    }
+</script>
 </body>
 </html>

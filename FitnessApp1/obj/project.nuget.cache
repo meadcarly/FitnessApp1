@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wSMBABy1zXOvTjvqVszzgBz67hxSmhN2guaN+mvCz8pFPbXjc5Bsi3kHy5pXGh/rttScD0PZf7myN9skHM7jIg==",
+  "dgSpecHash": "ZkRcJcr2tIqMwdXIIzcmeeS93EvH07FLRB4foMxjS8vpoATDJzf2JL/DJRq+wqBGKrxKRlRmJL7dsZ+15FBOng==",
   "success": true,
-  "projectFilePath": "/Users/carlymead/Desktop/repos/FitnessApp1/FitnessApp1/FitnessApp1.csproj",
+  "projectFilePath": "/Users/carlymead/Desktop/Projects/FitnessApp1/FitnessApp1/FitnessApp1.csproj",
   "expectedPackageFiles": [
     "/Users/carlymead/.nuget/packages/bouncycastle.cryptography/2.3.1/bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "/Users/carlymead/.nuget/packages/dapper/2.1.35/dapper.2.1.35.nupkg.sha512",

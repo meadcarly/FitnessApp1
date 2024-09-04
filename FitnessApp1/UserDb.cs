@@ -6,8 +6,14 @@ namespace FitnessApp1;
 
 public class UserDb : DbContext
 {
+    public UserDb(DbContextOptions<UserDb> options)
+        : base(options)
+    {
+    }
+
     //Represents a table in the database
-    public DbSet<User> Users { get; set; }
+    public DbSet<UserDb> Users { get; set; }
+    
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

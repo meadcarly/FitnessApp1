@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/carlymead/Desktop/repos/FitnessApp1/FitnessApp1/FitnessApp1.csproj": {}
+    "/Users/carlymead/Desktop/Projects/FitnessApp1/FitnessApp1/FitnessApp1.csproj": {}
   },
   "projects": {
-    "/Users/carlymead/Desktop/repos/FitnessApp1/FitnessApp1/FitnessApp1.csproj": {
+    "/Users/carlymead/Desktop/Projects/FitnessApp1/FitnessApp1/FitnessApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/carlymead/Desktop/repos/FitnessApp1/FitnessApp1/FitnessApp1.csproj",
+        "projectUniqueName": "/Users/carlymead/Desktop/Projects/FitnessApp1/FitnessApp1/FitnessApp1.csproj",
         "projectName": "FitnessApp1",
-        "projectPath": "/Users/carlymead/Desktop/repos/FitnessApp1/FitnessApp1/FitnessApp1.csproj",
+        "projectPath": "/Users/carlymead/Desktop/Projects/FitnessApp1/FitnessApp1/FitnessApp1.csproj",
         "packagesPath": "/Users/carlymead/.nuget/packages/",
-        "outputPath": "/Users/carlymead/Desktop/repos/FitnessApp1/FitnessApp1/obj/",
+        "outputPath": "/Users/carlymead/Desktop/Projects/FitnessApp1/FitnessApp1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/carlymead/.nuget/NuGet/NuGet.Config"
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

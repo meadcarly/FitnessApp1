@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessApp1.Controllers;
 
+
 public class MeasurementController : Controller
 {
     private readonly IMeasurementRepo _repo;
@@ -51,5 +52,12 @@ public class MeasurementController : Controller
     {
         _repo.InsertMeasurements(measurementsToInsert);
         return RedirectToAction("Index");
+    }
+    
+    public IActionResult ConvertToInches([FromQuery] decimal cm)
+    {
+        var conversion = new Conversion();
+        var inches = conversion.MetricToImperial(cm);
+        return Json(inches);
     }
 }
