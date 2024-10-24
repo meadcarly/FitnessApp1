@@ -1,0 +1,31 @@
+@model IEnumerable<Goals>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Goals History</title>
+</head>
+<body>
+<div>
+    <h2>Goals History</h2>
+    <table class="table">
+        <tr>
+            <th>GoalID</th>
+            <th>Goal</th>
+            <th>UserID</th>
+            <th>CompletedBy</th>
+        </tr>
+        @foreach (var goal in @Model)
+        {
+            <tr>
+                <td>@goal.GoalID</td>
+                <td>@goal.Goal</td>
+                <td>@goal.UserID</td>
+                <td>@goal.CompletedBy</td>
+            </tr>
+        }
+    </table>
+</div>
+</body>
+</html>
