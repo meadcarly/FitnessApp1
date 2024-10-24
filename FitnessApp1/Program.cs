@@ -26,6 +26,8 @@ builder.Services.AddTransient<IExerciseRepo, ExerciseRepo>();
 
 builder.Services.AddTransient<IMeasurementRepo, MeasurementRepo>();
 
+builder.Services.AddTransient<IGoalsRepo, GoalRepo>();
+
 var app = builder.Build();
 
 
