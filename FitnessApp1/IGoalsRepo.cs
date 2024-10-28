@@ -5,4 +5,6 @@ namespace FitnessApp1;
 public interface IGoalsRepo
 {
     public IEnumerable<Goals> GetAllGoals(int userId);
+
+    public Goals GetOneGoal(int goalId);
 }

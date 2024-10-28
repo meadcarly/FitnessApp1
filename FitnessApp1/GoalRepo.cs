@@ -17,4 +17,9 @@ public class GoalRepo : IGoalsRepo
     {
         return _connection.Query<Goals>("SELECT * FROM Goals WHERE UserID = 1");
     }
+
+    public Goals GetOneGoal(int goalId)
+    {
+        return _connection.QuerySingle<Goals>("SELECT * FROM Goals WHERE GoalID = @goalId", new{ goalId = goalId });
+    }
 }
