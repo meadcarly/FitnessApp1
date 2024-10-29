@@ -16,9 +16,9 @@ public class GoalController : Controller
         return View(goals);
     }
 
-    public IActionResult ViewSingleGoal(int goalId)
+    public IActionResult ViewIndividualGoal(int id)
     {
-        var goal = _repo.GetOneGoal(goalId);
+        var goal = _repo.GetOneGoal(id);
         return View(goal);
     }
 }

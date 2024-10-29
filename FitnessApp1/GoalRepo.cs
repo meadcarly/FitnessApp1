@@ -20,6 +20,6 @@ public class GoalRepo : IGoalsRepo
 
     public Goals GetOneGoal(int goalId)
     {
-        return _connection.QuerySingle<Goals>("SELECT * FROM Goals WHERE GoalID = @goalId", new{ goalId = goalId });
+        return _connection.QuerySingle<Goals>("SELECT * FROM Goals WHERE GoalID = @goalId", new { goalId = goalId });
     }
 }

@@ -19,7 +19,7 @@
         @foreach (var goal in @Model)
         {
             <tr>
-                <td>@goal.GoalID</td>
+                <td><a href="/Goal/ViewIndividualGoal/@goal.GoalID">@goal.GoalID</a></td>
                 <td>@goal.Goal</td>
                 <td>@goal.UserID</td>
                 <td>@goal.CompletedBy</td>
