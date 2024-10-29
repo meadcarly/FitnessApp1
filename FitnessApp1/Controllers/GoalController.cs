@@ -15,4 +15,10 @@ public class GoalController : Controller
         var goals = _repo.GetAllGoals(userId);
         return View(goals);
     }
+
+    public IActionResult ViewSingleGoal(int goalId)
+    {
+        var goal = _repo.GetOneGoal(goalId);
+        return View(goal);
+    }
 }

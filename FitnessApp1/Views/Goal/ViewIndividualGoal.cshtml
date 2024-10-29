@@ -1,0 +1,33 @@
+@model Goals
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ViewIndividualGoal</title>
+</head>
+<body>
+<div>
+    <h3>@Model.GoalID Information</h3>
+    
+    <table class="table">
+        <tr>
+            <th>Goal ID</th>
+            <th>Goal</th>
+            <th>User ID</th>
+            <th>Completed By</th>
+        </tr>
+        <tr>
+            <td>@Model.GoalID</td>
+            <td>@Model.Goal</td>
+            <td>@Model.UserID</td>
+            <td>@Model.CompletedBy</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
