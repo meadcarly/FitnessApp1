@@ -28,9 +28,15 @@ public class GoalController : Controller
         Goals goal = _repo.GetOneGoal(id);
         if (goal == null)
         {
-            return View("ProductNotFound");
+            return View("Error", new ErrorViewModel());
         }
 
         return View(goal);
+    }
+
+    public IActionResult UpdateGoalToDatabase(Goals goalMod)
+    {
+        _repo.UpdateOneGoal(goalMod);
+        return RedirectToAction("ViewIndividualGoal", new { id = goalMod.GoalID });
     }
 }
