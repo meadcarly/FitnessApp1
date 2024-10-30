@@ -7,4 +7,6 @@ public interface IGoalsRepo
     public IEnumerable<Goals> GetAllGoals(int userId);
 
     public Goals GetOneGoal(int goalId);
+
+    public void UpdateOneGoal(Goals goal);
 }

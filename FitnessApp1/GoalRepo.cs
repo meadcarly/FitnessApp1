@@ -22,4 +22,10 @@ public class GoalRepo : IGoalsRepo
     {
         return _connection.QuerySingle<Goals>("SELECT * FROM Goals WHERE GoalID = @goalId", new { goalId = goalId });
     }
+
+    public void UpdateOneGoal(Goals goal)
+    {
+        _connection.Execute("UPDATE Goals SET Goal = @goal, CompletedBy = @completedBy WHERE GoalID = @goalId",
+            new { goal = goal.Goal, completedBy = goal.CompletedBy });
+    }
 }

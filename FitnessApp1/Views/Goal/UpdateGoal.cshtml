@@ -1,0 +1,27 @@
+@model Goals
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>UpdateGoal</title>
+</head>
+<body>
+<div>
+    <h2>Update @Model.GoalID</h2>
+    
+    @using (Html.BeginForm("UpdateGoalToDatabase", "Goal", "Post"))
+    {
+        <input asp-for="GoalID" type="hidden" value="@Model.GoalID" />
+
+        <label asp-for="Goal" class="control-label">Goal</label>
+        <input type="text" name="Goal" class="form-control" value="@Model.Goal" />
+
+        <label asp-for="CompletedBy" class="control-label">Completed By</label>    
+        <input type="text" name="CompletedBy" class="form-control" value="@Model.CompletedBy" />
+
+        <input type="submit" value="Update Product" class="btn btn-primary" />
+    }
+</div>
+</body>
+</html>
