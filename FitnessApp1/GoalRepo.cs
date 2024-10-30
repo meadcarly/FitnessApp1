@@ -26,6 +26,6 @@ public class GoalRepo : IGoalsRepo
     public void UpdateOneGoal(Goals goal)
     {
         _connection.Execute("UPDATE Goals SET Goal = @goal, CompletedBy = @completedBy WHERE GoalID = @goalId",
-            new { goal = goal.Goal, completedBy = goal.CompletedBy });
+            new { goal = goal.Goal, completedBy = goal.CompletedBy, goalId = goal.GoalID });
     }
 }
