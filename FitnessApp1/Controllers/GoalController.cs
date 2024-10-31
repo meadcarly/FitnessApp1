@@ -39,4 +39,15 @@ public class GoalController : Controller
         _repo.UpdateOneGoal(goalMod);
         return RedirectToAction("ViewIndividualGoal", new { id = goalMod.GoalID });
     }
+
+    public IActionResult InsertGoal()
+    {
+        return View();
+    }
+
+    public IActionResult InsertGoalToDatabase(Goals goalToInsert)
+    {
+        _repo.InsertGoal(goalToInsert);
+        return RedirectToAction("Index");
+    }
 }
