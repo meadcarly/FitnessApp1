@@ -28,4 +28,10 @@ public class GoalRepo : IGoalsRepo
         _connection.Execute("UPDATE Goals SET Goal = @goal, CompletedBy = @completedBy WHERE GoalID = @goalId",
             new { goal = goal.Goal, completedBy = goal.CompletedBy, goalId = goal.GoalID });
     }
+
+    public void InsertGoal(Goals goalToInsert)
+    {
+        _connection.Execute("INSERT INTO Goals (Goal, UserID, CompletedBy) VALUES (@goal, @userId, @completedBy);",
+            new { goal = goalToInsert.Goal, userId = goalToInsert.UserID, completedBy = goalToInsert.CompletedBy });
+    }
 }

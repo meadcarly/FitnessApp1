@@ -9,4 +9,6 @@ public interface IGoalsRepo
     public Goals GetOneGoal(int goalId);
 
     public void UpdateOneGoal(Goals goal);
+
+    public void InsertGoal(Goals goalToInsert);
 }
