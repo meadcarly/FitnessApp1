@@ -1,0 +1,30 @@
+@using System.Reflection.Emit
+@model Goals
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Creating new goals</title>
+</head>
+<body>
+<div>
+    <h2>Create a new Goal</h2>
+    @using (Html.BeginForm("InsertGoalToDatabase", "Goal", "Post"))
+    {
+        <input asp-for="GoalID" type="hidden" value="" />
+        
+        <label asp-for="Goal" class="control-label">Goal</label>
+        <input type="text" name="Goal" class="form-control" value="" />
+        
+        <label asp-for="UserID" class="control-label">UserID</label>
+        <input type="number" name="UserID" class="form-control" value="1"/>
+        
+        <label asp-for="CompletedBy" class="control-label">Completed by</label>
+        <input type="text" name="CompletedBy" class="form-control" value=""/>
+        
+        <input type="submit" value="Create Goal" class="btn btn-primary" />
+    }
+</div>
+</body>
+</html>
