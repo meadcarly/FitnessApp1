@@ -34,4 +34,9 @@ public class GoalRepo : IGoalsRepo
         _connection.Execute("INSERT INTO Goals (Goal, UserID, CompletedBy) VALUES (@goal, @userId, @completedBy);",
             new { goal = goalToInsert.Goal, userId = goalToInsert.UserID, completedBy = goalToInsert.CompletedBy });
     }
+
+    public void DeleteGoal(Goals goalToDelete)
+    {
+        _connection.Execute("DELETE * FROM Goals WHERE GoalID = @goalId;", new { id = goalToDelete.GoalID });
+    }
 }

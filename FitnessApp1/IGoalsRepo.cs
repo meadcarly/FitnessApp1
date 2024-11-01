@@ -11,4 +11,6 @@ public interface IGoalsRepo
     public void UpdateOneGoal(Goals goal);
 
     public void InsertGoal(Goals goalToInsert);
+
+    public void DeleteGoal(Goals goalToDelete);
 }
